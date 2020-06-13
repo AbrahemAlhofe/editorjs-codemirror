@@ -1,0 +1,13 @@
+.CodeMirror { height: unset; }
+.ce-code__mode {
+    font-family: monospace;
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #2c3354;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
