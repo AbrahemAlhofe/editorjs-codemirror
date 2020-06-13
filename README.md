@@ -13,13 +13,13 @@ CodeMirror Tool  for the [Editor.js](https://ifmo.su/editor) allows you to use c
 Get the package
 
 ```shell
-npm i --save-dev @editorjs/codemirror
+npm i --save-dev editorjs-codemirror
 ```
 
 Include module at your application
 
 ```javascript
-const CodeTool = require('@editorjs/codemirror');
+const CodeTool = require('editorjs-codemirror');
 ```
 
 ### Download to your project's source dir
