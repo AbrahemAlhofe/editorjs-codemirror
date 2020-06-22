@@ -22,7 +22,7 @@ require('codemirror/mode/vue/vue.js');
 
 require('codemirror/lib/codemirror.css').toString();
 
-require('./placholder');
+require('./placeholder');
 
 /**
  * CodeTool for Editor.js
@@ -152,9 +152,12 @@ class CodemirrorTool {
    * @returns {CodeData} - saved plugin code
    * @public
    */
-  save() {
+  save(wrapper) {
+    const html = wrapper.querySelector('.CodeMirror-code').outerHTML;
+
     return {
       code: this.nodes.editor.getValue(),
+      html : html,
       lang: this.nodes.editor.getOption('mode')
     };
   }
@@ -241,6 +244,7 @@ class CodemirrorTool {
   static get sanitize() {
     return {
       code: true, // Allow HTML tags
+      html: true // Allow HTML tags
     };
   }
 }
